@@ -27,8 +27,6 @@ export const MOVEMENT_EXPLORER_URL = 'https://explorer.movementnetwork.xyz/txn';
 // Add Swap related constants
 export const SWAP_ADDRESS = {
     "porto": "0xe577b40d9348496fe1f71783e0c3fc719ed05333f74c4e3d95d7688ca5b7df74",
-    "bardock": "0xe577b40d9348496fe1f71783e0c3fc719ed05333f74c4e3d95d7688ca5b7df74", // Need to update with actual address
-    "mainnet": "0xe577b40d9348496fe1f71783e0c3fc719ed05333f74c4e3d95d7688ca5b7df74"  // Need to update with actual address
 };
 
 export const SWAP_ADDRESS_MODULE = "router";
