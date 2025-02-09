@@ -45,6 +45,7 @@ timeline_cache.json
 *.sqlite
 
 # Character configurations
+characters/movementAssistant.character.json
 characters/**/secrets.json
 characters/**/*.env
 characters/**/*.key

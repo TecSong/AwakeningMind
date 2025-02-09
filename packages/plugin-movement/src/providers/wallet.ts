@@ -177,14 +177,18 @@ export class WalletProvider {
             }
             console.log("Cache miss for fetchPrices");
 
-            const movePriceData = await this.fetchPricesWithRetry().catch(
-                (error) => {
-                    console.error("Error fetching Move price:", error);
-                    throw error;
-                }
-            );
+            // const movePriceData = await this.fetchPricesWithRetry().catch(
+            //     (error) => {
+            //         console.error("Error fetching Move price:", error);
+            //         throw error;
+            //     }
+            // );
+            // const prices: Prices = {
+            //     move: { usd: movePriceData.pair.priceUsd },
+            // };
             const prices: Prices = {
-                move: { usd: movePriceData.pair.priceUsd },
+                // TODO: get prices from available sources
+                move: { usd: "0.6" },
             };
             this.setCachedData(cacheKey, prices);
             return prices;
