@@ -31,7 +31,7 @@ import {
     SWAP_ADDRESS_FUNCTION,
     DEFAULT_NETWORK
 } from "../constants";
-import { formatTokenAmount } from "../types/token";
+import { convertAddressToTokenName, formatTokenAmount } from "../types/token";
 
 // Define Swap content interface
 export interface SwapContent extends Content {
@@ -232,7 +232,7 @@ export default {
 
             if (callback) {
                 callback({
-                    text: `Successfully swapped ${content.inputAmount} ${content.inputToken} to ${content.outputToken}\nTransaction: ${executedTransaction.hash}\nView on Explorer: ${explorerUrl}`,
+                    text: `Successfully swapped ${convertAddressToTokenName(content.inputToken)} ${content.inputAmount}  ${convertAddressToTokenName(content.outputToken)}\nTransaction: ${executedTransaction.hash}\nView on Explorer: ${explorerUrl}`,
                     content: {
                         success: true,
                         hash: executedTransaction.hash,

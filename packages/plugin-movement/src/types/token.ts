@@ -21,6 +21,21 @@ function getTokenTypeArgument(token: Token): string {
     return token.address;
 }
 
+function convertTokenNameToAddress(tokenName: string): string {
+    if (tokenName.toLowerCase() === "move") {
+        return NATIVE_MOVE_ADDRESS;
+    }
+    return tokenName;
+}
+
+function convertAddressToTokenName(address: string): string {
+    if (address === NATIVE_MOVE_ADDRESS) {
+        return "MOVE";
+    }
+    const parts = address.split("::");
+    return parts[parts.length - 1];
+}
+
 function formatTokenAmount(amount: number | string, decimals: number): string {
     const parsedAmount = typeof amount === 'string' ? parseFloat(amount) : amount;
     return (parsedAmount * Math.pow(10, decimals)).toString();
@@ -31,5 +46,7 @@ export {
     SwapParams,
     getTokenTypeArgument,
     formatTokenAmount,
-    NATIVE_MOVE_ADDRESS
+    NATIVE_MOVE_ADDRESS,
+    convertTokenNameToAddress,
+    convertAddressToTokenName,
 }; 
