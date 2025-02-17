@@ -89,6 +89,20 @@
                     "text": "Certainly! Please provide the description to create your Decentralized Identifier (DID)."
                 }
             }
+        ],
+        [
+            {
+                "user": "{{user1}}",
+                "content": {
+                    "text": "swap 0.01 move to yuzu"
+                }
+            },
+            {
+                "user": "MovementAssistant",
+                "content": {
+                    "text": "I'll help you swap 0.01 MOVE to YUZU tokens. Please confirm the following transaction details:\n\nFrom: 0.01 MOVE\nTo: ~1.2 YUZU (estimated)\nSlippage: 0.5%\n\nWould you like to proceed with this swap?"
+                }
+            }
         ]
     ],
     "postExamples": [
