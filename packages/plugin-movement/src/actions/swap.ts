@@ -65,17 +65,18 @@ Example response:
 \`\`\`
 
 Rules:
-1. The token addresses must be exact
-2. The amounts are typically numbers less than 100
-3. Return exact values found in the message
+1. For MOVE token, always use "0x1::aptos_coin::AptosCoin"
+2. For YUZU token, always use "0xbd9162ee6441fcf49652f0a50706279187e744aa4622a7c30bfeeaa18b7e4147::porto::YUZU"
+3. The amounts should be numeric values less than 100
+4. Return exact token addresses, not symbols
 
 Recent messages:
 {{recentMessages}}
 
 Extract and return ONLY the following in a JSON block:
-- inputToken: The input token address
-- outputToken: The output token address
-- inputAmount: The amount of input tokens
+- inputToken: The complete token address (not just the symbol)
+- outputToken: The complete token address (not just the symbol)
+- inputAmount: The numeric amount of input tokens
 
 Return ONLY the JSON block with these fields.`;
 
